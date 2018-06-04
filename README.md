@@ -1,5 +1,5 @@
 ##  HvA PC :: Assignment 6
-This is an exercise for the subject of Distributed Objects
+This is an exercise for the subject of CSP
 
 ## Prerequisites
 You must have an IDE to work with this project. We recommend using the IntelliJ IDEA Community Edition. This IDE has good integration with Maven and JUnit.
@@ -32,7 +32,7 @@ To follow instructions, see the TODO tab of your IDE, or look for TODO tags into
 
 The objective here is understand how to implement a synchronous communication using message queues.
 
-![](doc/)
+![](doc/diagram.png)
 
 To follow instructions, see the TODO tab of your IDE, or look for TODO tags into the source-code
 
