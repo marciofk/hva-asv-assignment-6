@@ -16,7 +16,7 @@ This project has distributed object implementation using a Message-Oriented Midd
 
 ##### Part 1: Installation of ActiveMQ
 
-If you are using the Raspberry PI cluster, ActiveMQ is already installed on host 169.254.1.1. If not you can download it from [the ActiveMQ site](http://activemq.apache.org/). If you are a MacOS user, use brew: see the documentation [here](http://activemq.apache.org/getting-started.html#GettingStarted-UsingHomebrewinstalleronOSX).
+If you are using the Raspberry PI cluster, ActiveMQ is already installed on host 169.254.1.1. If not, you can download it from [the ActiveMQ website](http://activemq.apache.org/). If you are a MacOS user, use brew: see the documentation [here](http://activemq.apache.org/getting-started.html#GettingStarted-UsingHomebrewinstalleronOSX).
 
 To open the adminstration console, go to http://[host]:8161, where [host] is the name of the host where ActiveMQ is installed. The default user and password is admin/admin.
 
