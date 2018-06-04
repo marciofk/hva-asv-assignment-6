@@ -30,7 +30,7 @@ To follow instructions, see the TODO tab of your IDE, or look for TODO tags into
 
 ##### Part 3: An example of synchronous communication
 
-The objective here is understand how to implement a synchronous communication using message queues.
+The objective here is understand how to implement a synchronous communication using message queues and correlation IDs.
 
 ![](doc/diagram.png)
 
