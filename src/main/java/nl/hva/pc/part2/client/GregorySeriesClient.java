@@ -59,7 +59,8 @@ public class GregorySeriesClient {
             Thread.sleep(new Random().nextInt(5000));
 
             // Wait for the returning message
-            MessageConsumer consumer = session.createConsumer(out);
+            MessageConsumer consumer = session.createConsumer(out,"JMSCorrelationID='" +
+                                    + parms.getLoopCount() + "'");
             Message returnMessage = consumer.receive();
 
             if (returnMessage instanceof TextMessage) {
@@ -102,6 +103,7 @@ public class GregorySeriesClient {
     public static TextMessage createTextMessage(Session session,GregorySeriesParams parms) throws JMSException, JsonProcessingException {
         String jsonString = MAPPER.writeValueAsString(parms);
         TextMessage msg = session.createTextMessage(jsonString);
+        msg.setJMSCorrelationID(Integer.toString(parms.getLoopCount()));
         return msg;
     }
 

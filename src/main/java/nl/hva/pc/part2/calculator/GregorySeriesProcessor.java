@@ -58,6 +58,7 @@ public class GregorySeriesProcessor {
                     GregorySeriesReturn result = calculator.execute(params);
 
                     TextMessage returnMessage = session.createTextMessage(mapper.writeValueAsString(result));
+                    returnMessage.setJMSCorrelationID(message.getJMSCorrelationID());
                     producer.send(returnMessage);
                     System.out.println("message sent: " + returnMessage);
 
