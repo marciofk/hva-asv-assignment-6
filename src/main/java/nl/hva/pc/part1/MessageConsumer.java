@@ -5,11 +5,16 @@ import org.apache.activemq.ActiveMQConnectionFactory;
 
 import javax.jms.*;
 
-public class HelloWorldConsumer {
+public class MessageConsumer {
 
     // TODO 2.1. Take a look at the consumer source-code
-    // TODO 2.3. Run the consumer. What's happened? Take a look at the queues view on the activeMQ console.
-    // TODO 2.3.1. Is it possible specify a timeout when receiving messages, to leave after some amount of time?
+
+    // TODO 2.3. Run the consumer.
+    // What's happened? Take a look at the queues view on the activeMQ console.
+    // http://localhost:8161
+
+    // TODO 2.3.1. Is it possible specify a timeout when receiving messages?
+    // The idea is leaving after some amount of time
 
     public static void main(String[] args) {
         try {
@@ -28,7 +33,7 @@ public class HelloWorldConsumer {
             Destination destination = session.createQueue("QUEUE.MESSAGE");
 
             // Create a MessageConsumer from the Session to the Topic or Queue
-            MessageConsumer consumer = session.createConsumer(destination);
+            javax.jms.MessageConsumer consumer = session.createConsumer(destination);
 
             // Wait for a message
             Message message = consumer.receive();

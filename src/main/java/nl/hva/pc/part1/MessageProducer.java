@@ -6,7 +6,7 @@ import org.apache.activemq.ActiveMQConnectionFactory;
 import javax.jms.*;
 import java.util.Date;
 
-public class HelloWorldProducer {
+public class MessageProducer {
 
     // TODO 2.2: Take a look at the producer code
     // TODO 2.4: Run the producer code. What's happened. Take a look at the client execution
@@ -30,7 +30,7 @@ public class HelloWorldProducer {
             Destination destination = session.createQueue("QUEUE.MESSAGE");
 
             // Create a MessageProducer from the Session to the Topic or Queue
-            MessageProducer producer = session.createProducer(destination);
+            javax.jms.MessageProducer producer = session.createProducer(destination);
             producer.setDeliveryMode(DeliveryMode.PERSISTENT);
 
             // Create a messages
